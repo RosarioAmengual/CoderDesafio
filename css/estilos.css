@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+main h1{
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+}
+p{
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+}
+h2{
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+}
+
+nav{
+    background-color: #D7C8C5;
+    padding: 6px 20px;
+    position: sticky;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    display: inline-block;
+    margin: 20px;     
+}
+        
+nav ul li a{
+    color: rgb(53, 51, 51);
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.headerencargos{
+    background-color: #C4B0A4;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+
+
+body{
+    background-color: #e9dedc;
+}
+
+table{
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+footer{
+    background-color: #564E4C;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.fondo-blanco{
+    background-color: rgb(255, 255, 255);
+}
+
+.fondo-gris{
+    background-color: #564E4C;
+}
+
+.altura-linea{
+    line-height: 2.5rem;
+}
+
+/*Box Model*/
+.logo__img--sm{
+    width: 120px;
+}
+
+header div{
+    width: 40%;
+    margin: 30px auto;
+}
+.encabezado__img--fluid{
+    width: 100%;
+}
+.introduccion__titulo{
+    width:90%;
+    height: auto;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.introduccion__cita{
+    width: 60%;
+    height: auto;
+    padding: 40px;
+    margin:20px auto;
+    border: dotted rgb(163, 149, 149) 2px ;
+    overflow: hidden;
+}
+
+
+.pie{
+    display: flex;   
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pie__icon--sm{
+    width: 40px;
+    height: auto;
+    margin: 40px;
+    
+}
+
+/* Galeria imágenes Productos */
+.galeria{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    justify-content: center;
+    flex-direction: column;
+    flex-flow: row wrap; 
+}
+
+.w-80{
+    width: 80%;
+}
+
+.galeria figure{
+    text-align: center;
+}
+
+.galeria figure img{
+    border-radius: 5px;
+}
+
+/*Página productos*/
+.main__titulo{
+    width:90%;
+    height: auto;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+.main__texto{
+    width: 60%;
+    height: auto;
+    padding: 40px;
+    margin:20px auto;
+    border: dotted rgb(163, 149, 149) 2px ;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*Página procesos y cuidados*/
+.gridPC{
+    display: grid;
+    grid-template-areas: "nav nav" "article main" "aside aside" "footer footer";
+    grid-template-rows: auto;
+    grid-template-columns: repeat (2, auto);
+    gap: 20px;
+    justify-content: center;
+}
+/*areas grilla*/
+nav{
+    grid-area: nav;
+}
+article{
+    padding: 10px;
+    grid-area: article;
+}
+main{
+    padding: 10px;
+    grid-area: main;
+}
+aside{
+    padding: 10px;
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+.flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.imgg{
+    width: 75%;
+}
+
+/* Mobile first */
+@media (max-width: 480px){
+    .gridPC{
+        grid-template-areas: 
+        "nav"
+        "article"
+        "main"
+        "aside"
+        "footer";
+        grid-template-columns: 100%;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li{
+        margin:5px;
+    }
+    nav ul li a{
+        font-size: 20px;    
+    }
+    div aside{
+        position: sticky;
+        bottom: 0;
+        top: 0;
+    }
+    div nav ul li a{
+        font-size: 30px;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .image{
+        height:200px;
+        width:200px;
+    }
+    div aside div a img{
+        width:10px;
+    }
+    .header__texto{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+ /*Tablet*/
+
+@media (min-width: 481px) and (max-width:768px){
+    nav ul li a{
+        font-size: 1rem;
+    }
+    .image{
+        width:300px;
+        height: 300px;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    div nav ul li a{
+        font-size: 30px;
+    }
+    div aside div a img{
+        width:100%;
+    }
+}
+
+
+.bg-article{
+    background-color: #E9DEDC;
+    display: flex;
+}
+.procesos{
+   text-align: center;
+   display: flex;
+   flex-wrap: nowrap;
+}
+.procesos__titulo{
+    width:90%;
+    height: auto;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center; 
+}
+
+.textomain{
+    padding: 10px;
+    margin:10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.articletexto{
+    padding: 20px;
+    margin:30px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+.asidetexto{
+    color: white;
+    font-size: 1rem;    
+    line-height: 1.5rem;
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+/*Página historia*/
+.grid{
+    width: 99%;
+    display: grid;
+}
+
+.template-areas{
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 122px 300px 400px 200px 124px;
+    grid-template-areas: "nav nav"
+                        "header header"
+                        "main main"
+                        "aside aside"
+                        "footer footer"
+}
+
+#nav{
+    grid-area: nav;
+}
+
+
+#header{
+    grid-area: header;
+}
+.bg-header{
+    background-color: #C4B0A4;
+    display: flex;
+}
+.header__texto{
+    width: 70%;
+    height: auto;
+    padding: 80px;  
+    margin: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+#main{
+    grid-area: main;
+}
+.bg-main{
+    background-color: #E9DEDC;
+    display: flex;
+    justify-items: center;
+}
+.main-titulo{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.main-texto{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+#aside{
+    grid-area: aside;
+}
+.bg-aside{
+    background-color: #9B7A69;
+    display: flex;
+}
+.img-aside{
+    width: 50%;
+    heigth: 200px;
+}
+.cita-aside{
+    color: white;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 20px;
+    padding: 50px;
+    text-align: center;
+}
+#footer{
+    grid-area: footer;
+}
+
+.bg-pie{
+    background-color: #564E4C;
+}
+
+/*Página Encargos*/
+.headerencargos{
+    text-align: center;
+    width: 70%;
+    height: auto;
+    padding: 30px;
+    margin: 10px auto;
+
+}
+.headertexto{
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    padding: 30px;
+    margin: 10px auto;
+    overflow: hidden;
+    }
+
+.mainencargos{
+    text-align: center;
+    width: 70%;
+    height: auto;
+    padding: 30px;
+    margin: 10px auto;
+}
+
+.sectionencargos{
+    display: flex;
+}
+.mainencargos_titulo{
+    width:90%;
+    height: auto;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center; 
+}
+.mainencargos__img{
+    width: 100%;
+    height: auto;
+    margin: 10px 20px;
+    
+}
+.mainencargos__texto{
+    text-align: center;
+    width: 80%;
+    height: auto;
+    padding: 30px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.tabla{
+    text-align: center;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Página Contacto*/
+.maincontacto__parrafo{
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    margin: 10px auto;
+}
+.maincontacto__section{
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    width: 80%;
+    height: auto;
+    padding: 30px;
+    margin: 10px auto; 
+}
+
+
+
